@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Photo Cleanup",
+    "slug": "photo-cleanup-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.newfieldstech.photocleanup",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Photo Cleanup needs access to your photo library to help you find and remove duplicate or similar photos.",
+        "NSPhotoLibraryAddUsageDescription": "Photo Cleanup needs permission to delete photos you choose to remove."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.newfieldstech.photocleanup",
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Photo Cleanup needs access to your photo library to help you find and remove duplicate or similar photos.",
+          "savePhotosPermission": "Photo Cleanup needs permission to delete photos you choose to remove.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
+    "scheme": "photo-cleanup"
+  }
+}
